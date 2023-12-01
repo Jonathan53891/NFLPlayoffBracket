@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <title>NFL Playoff Bracket</title>
+    <head>
+        <link rel="stylesheet" type="text/css" href="media/css/smoothness/jquery-ui-1.9.2.custom.css" />
+        <link rel="stylesheet" type="text/css" href="media/css/nfl/bracket.css" />
+
+        <script type="text/javascript" src="media/js/jquery-1.8.3.js"></script>
+        <script type="text/javascript" src="media/js/jquery-ui-1.9.2.custom.js"></script>
+        <script type="text/javascript" src="media/js/URI.js"></script>
+
+        <script type="text/javascript" src="media/js/nfl/bracket.js"></script>
+
+        <script type="text/javascript">
+            var teams = {
+            afc: [
+                "chiefs",
+                "bills",
+                "bengals",
+	        "jaguars",
+		"chargers",
+		"ravens",
+		"dolphins",
+            ],
+            nfc: [
+                "eagles",
+                "fortyniners",
+		"vikings",
+                "buccaneers",
+                "cowboys",
+		"giants",
+		"seahawks",
+            ]
+        };
+
+        var serial = parseInt(location.hash.substr(1)) || 0;
+        var root_url = "";
+        </script>
+        <style>
+        .team_logo.ravens { background-image: url("media/img/nfl/ravens.svg") }
+        .team_logo.chiefs { background-image: url("media/img/nfl/chiefs.svg") }
+        .team_logo.patriots { background-image: url("media/img/nfl/patriots.svg") }
+        .team_logo.dolphins { background-image: url("media/img/nfl/dolphins.svg") }
+        .team_logo.chargers { background-image: url("media/img/nfl/chargers.svg") }
+        .team_logo.jaguars { background-image: url("media/img/nfl/jaguars.svg") }
+        .team_logo.texans { background-image: url("media/img/nfl/texans.svg") }
+        .team_logo.bills { background-image: url("media/img/nfl/bills.svg") }
+        .team_logo.titans { background-image: url("media/img/nfl/titans.svg") }
+        .team_logo.fortyniners { background-image: url("media/img/nfl/fortyniners.svg") }
+        .team_logo.giants { background-image: url("media/img/nfl/giants.svg") }
+        .team_logo.packers { background-image: url("media/img/nfl/packers.svg") }
+        .team_logo.saints { background-image: url("media/img/nfl/saints.svg") }
+        .team_logo.seahawks { background-image: url("media/img/nfl/seahawks.svg") }
+        .team_logo.vikings { background-image: url("media/img/nfl/vikings.svg") }
+        .team_logo.eagles { background-image: url("media/img/nfl/eagles.svg") }
+        .team_logo.colts { background-image: url("media/img/nfl/colts.svg") }
+        .team_logo.browns { background-image: url("media/img/nfl/browns.svg") }
+        .team_logo.steelers { background-image: url("media/img/nfl/steelers.svg") }
+        .team_logo.bears { background-image: url("media/img/nfl/bears.svg") }
+        .team_logo.rams { background-image: url("media/img/nfl/rams.svg") }
+        .team_logo.buccaneers { background-image: url("media/img/nfl/buccaneers.svg") }
+        .team_logo.football { background-image: url("media/img/nfl/football.svg") }
+	.team_logo.raiders { background-image: url("media/img/nfl/raiders.svg") }
+	.team_logo.bengals { background-image: url("media/img/nfl/bengals.svg") }
+	.team_logo.cowboys { background-image: url("media/img/nfl/cowboys.svg") }
+	.team_logo.cardinals { background-image: url("media/img/nfl/cardinals.svg") }
+        .afc_logo { background-image: url('media/img/nfl/afc.gif') }
+        .nfc_logo { background-image: url('media/img/nfl/nfc.gif') }
+
+        </style>
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-37402971-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div id="top" class="top">
+                <div class="afc_logo"></div>
+                <div class="champ">
+                    <span class="champ_label">Champion</span>
+                    <div class="team">
+                        <div class="team_logo">&nbsp;</div>
+                    </div>
+                </div>
+                <div class="nfc_logo"></div>
+            </div>
+            <div id="bracket" class="bracket">
+                <div id="afc_wc" class="round wildcard">
+                    <div class="label">Wildcard</div>
+                    <div class="game"></div>
+                    <div class="game"></div>
+                    <div class="game"></div>
+                </div>
+                <div id="afc_div" class="round divisional">
+                    <div class="label">Divisional</div>
+                    <div class="game"></div>
+                    <div class="game"></div>
+                </div>
+                <div id="afc_conf" class="round conference">
+                    <div class="label">Conference</div>
+                    <div class="game"></div>
+                </div>
+                <div id="sb_game" class="round superbowl">
+                    <div class="label">Super Bowl</div>
+                    <div class="game"></div>
+                </div>
+                <div id="nfc_conf" class="round conference">
+                    <div class="label">Conference</div>
+                    <div class="game"></div>
+                </div>
+                <div id="nfc_div" class="round divisional">
+                    <div class="label">Divisional</div>
+                    <div class="game"></div>
+                    <div class="game"></div>
+                </div>
+                <div id="nfc_wc" class="round wildcard">
+                    <div class="label">Wildcard</div>
+                    <div class="game"></div>
+                    <div class="game"></div>
+                    <div class="game"></div>
+                </div>
+            </div>
+
+            <div id="share">
+                <label for="share_url">share with this url:</label>
+                <input id="share_url" readonly></input>
+                <br/>
+                <button id="reset">reset selections</button>
+            </div>
+        </div>
+    </body>
+</html>
