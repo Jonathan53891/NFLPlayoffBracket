@@ -14,22 +14,22 @@
         <script type="text/javascript">
             var teams = {
             afc: [
-                "chiefs",
+                "ravens",
                 "bills",
-                "bengals",
-	        "jaguars",
-		"chargers",
-		"ravens",
-		"dolphins",
+                "chiefs",
+                "texans",
+		        "browns",
+		        "dolphins",
+		        "steelers",
             ],
             nfc: [
-                "eagles",
-                "fortyniners",
-		"vikings",
-                "buccaneers",
+                "49ers",
                 "cowboys",
-		"giants",
-		"seahawks",
+		        "lions",
+                "buccaneers",
+                "eagles",
+		        "rams",
+		        "packers",
             ]
         };
 
@@ -37,35 +37,35 @@
         var root_url = "";
         </script>
         <style>
-        .team_logo.ravens { background-image: url("media/img/nfl/ravens.svg") }
-        .team_logo.chiefs { background-image: url("media/img/nfl/chiefs.svg") }
-        .team_logo.patriots { background-image: url("media/img/nfl/patriots.svg") }
-        .team_logo.dolphins { background-image: url("media/img/nfl/dolphins.svg") }
-        .team_logo.chargers { background-image: url("media/img/nfl/chargers.svg") }
-        .team_logo.jaguars { background-image: url("media/img/nfl/jaguars.svg") }
-        .team_logo.texans { background-image: url("media/img/nfl/texans.svg") }
-        .team_logo.bills { background-image: url("media/img/nfl/bills.svg") }
-        .team_logo.titans { background-image: url("media/img/nfl/titans.svg") }
-        .team_logo.fortyniners { background-image: url("media/img/nfl/fortyniners.svg") }
-        .team_logo.giants { background-image: url("media/img/nfl/giants.svg") }
-        .team_logo.packers { background-image: url("media/img/nfl/packers.svg") }
-        .team_logo.saints { background-image: url("media/img/nfl/saints.svg") }
-        .team_logo.seahawks { background-image: url("media/img/nfl/seahawks.svg") }
-        .team_logo.vikings { background-image: url("media/img/nfl/vikings.svg") }
-        .team_logo.eagles { background-image: url("media/img/nfl/eagles.svg") }
-        .team_logo.colts { background-image: url("media/img/nfl/colts.svg") }
-        .team_logo.browns { background-image: url("media/img/nfl/browns.svg") }
-        .team_logo.steelers { background-image: url("media/img/nfl/steelers.svg") }
-        .team_logo.bears { background-image: url("media/img/nfl/bears.svg") }
-        .team_logo.rams { background-image: url("media/img/nfl/rams.svg") }
-        .team_logo.buccaneers { background-image: url("media/img/nfl/buccaneers.svg") }
+        .team_logo.ravens { background-image: url("media/img/nfl/ravens.png") }
+        .team_logo.chiefs { background-image: url("media/img/nfl/chiefs.png") }
+        .team_logo.patriots { background-image: url("media/img/nfl/patriots.png") }
+        .team_logo.dolphins { background-image: url("media/img/nfl/dolphins.png") }
+        .team_logo.chargers { background-image: url("media/img/nfl/chargers.png") }
+        .team_logo.jaguars { background-image: url("media/img/nfl/jaguars.png") }
+        .team_logo.texans { background-image: url("media/img/nfl/texans.png") }
+        .team_logo.bills { background-image: url("media/img/nfl/bills.png") }
+        .team_logo.titans { background-image: url("media/img/nfl/titans.png") }
+        .team_logo.fortyniners { background-image: url("media/img/nfl/49ers.png") }
+        .team_logo.giants { background-image: url("media/img/nfl/giants.png") }
+        .team_logo.packers { background-image: url("media/img/nfl/packers.png") }
+        .team_logo.saints { background-image: url("media/img/nfl/saints.png") }
+        .team_logo.seahawks { background-image: url("media/img/nfl/seahawks.png") }
+        .team_logo.vikings { background-image: url("media/img/nfl/vikings.png") }
+        .team_logo.eagles { background-image: url("media/img/nfl/eagles.png") }
+        .team_logo.colts { background-image: url("media/img/nfl/colts.png") }
+        .team_logo.browns { background-image: url("media/img/nfl/browns.png") }
+        .team_logo.steelers { background-image: url("media/img/nfl/steelers.png") }
+        .team_logo.bears { background-image: url("media/img/nfl/bears.png") }
+        .team_logo.rams { background-image: url("media/img/nfl/rams.png") }
+        .team_logo.buccaneers { background-image: url("media/img/nfl/buccaneers.png") }
         .team_logo.football { background-image: url("media/img/nfl/football.svg") }
-	.team_logo.raiders { background-image: url("media/img/nfl/raiders.svg") }
-	.team_logo.bengals { background-image: url("media/img/nfl/bengals.svg") }
-	.team_logo.cowboys { background-image: url("media/img/nfl/cowboys.svg") }
-	.team_logo.cardinals { background-image: url("media/img/nfl/cardinals.svg") }
-        .afc_logo { background-image: url('media/img/nfl/afc.gif') }
-        .nfc_logo { background-image: url('media/img/nfl/nfc.gif') }
+	.team_logo.raiders { background-image: url("media/img/nfl/raiders.png") }
+	.team_logo.bengals { background-image: url("media/img/nfl/bengals.png") }
+	.team_logo.cowboys { background-image: url("media/img/nfl/cowboys.png") }
+	.team_logo.cardinals { background-image: url("media/img/nfl/cardinals.png") }
+        .afc_logo { background-image: url('media/img/nfl/afc.jpg') }
+        .nfc_logo { background-image: url('media/img/nfl/nfc.jpg') }
 
         </style>
 
